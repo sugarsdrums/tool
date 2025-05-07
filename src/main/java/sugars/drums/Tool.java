@@ -13,7 +13,7 @@ import java.util.Objects;
 
 public class Tool {
 
-    private static final LocalDate TARGET_DATE = LocalDate.of(2024, 12, 1);
+    private static final LocalDate TARGET_DATE = LocalDate.of(2025, 7, 1);
     private static final DateTimeFormatter SHORT = DateTimeFormatter.ofPattern("yyMM");
 
     private static final String YEAR_MONTH = TARGET_DATE.format(SHORT);
@@ -64,7 +64,7 @@ public class Tool {
             }
             schedule.place = next(line, "**separator**", "open", "start", "1st", "詳細", "時間未定", "時間料金未定", "時間・料金未定", "  ");
             line = sub(line, schedule.place).replace("**separator**", "");
-            schedule.time = next(line, "##separator##", "一般", "大人", "前売", "予約", "\\", "￥", "料金", "Free", "    ");
+            schedule.time = next(line, "##separator##", "一般", "大人", "前売", "予約", "\\", "￥", "料金", "Free", "＊入場無料", "    ");
             schedule.fee = sub(line, schedule.time).replace("##separator##", "");
             index++;
 
