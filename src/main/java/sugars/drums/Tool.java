@@ -13,7 +13,7 @@ import java.util.Objects;
 
 public class Tool {
 
-    private static final LocalDate TARGET_DATE = LocalDate.of(2025, 9, 1);
+    private static final LocalDate TARGET_DATE = LocalDate.of(2026, 2, 1);
     private static final DateTimeFormatter SHORT = DateTimeFormatter.ofPattern("yyMM");
 
     private static final String YEAR_MONTH = TARGET_DATE.format(SHORT);
